@@ -1,23 +1,27 @@
-Feature 6: Assessment History
-User Story 7: View Assessment History
+Feature 5: AI Assessment Report
+User Story 6: View AI Summary Report
 User Story
 
 As a Registered User
 
-I want to view my previous assessments
+I want to view AI-generated feedback
 
-So that I can monitor my improvement over time.
+So that I understand my strengths and areas for improvement.
 
 Acceptance Criteria
+Feature: AI Summary Report
 
-Feature: Assessment History
+Scenario: View AI Report
+Given AI evaluation is complete
+When the user opens the report
+Then the report displays:
+And Assessment Summary
+And Strengths
+And Weaknesses
+And Improvement Areas
+And Personalized Recommendations
 
-Scenario: History Available
-Given previous assessments exist
-When the user opens Assessment History
-Then all completed assessments are listed chronologically
-
-Scenario: Empty History
-Given no completed assessments exist
-When Assessment History opens
-Then an empty state message is displayed
+Scenario: AI Processing Delay
+Given AI evaluation is pending
+When the report page opens
+Then a processing message is displayed
