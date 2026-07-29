@@ -1,22 +1,22 @@
-Feature 7: Gamification
-User Story 8: Earn XP
+Feature 6: Assessment History
+User Story 7: View Assessment History
 User Story
 
 As a Registered User
 
-I want to earn experience points
+I want to view my previous assessments
 
-So that I stay motivated to continue learning.
+So that I can monitor my improvement over time.
 
 Acceptance Criteria
-Feature: Experience Points
+Feature: Assessment History
 
-Scenario: Assessment Completed
-Given the assessment is completed successfully
-When evaluation finishes
-Then 100 XP is awarded
+Scenario: History Available
+Given previous assessments exist
+When the user opens Assessment History
+Then all completed assessments are listed chronologically
 
-Scenario: Daily Login
-Given the user logs in today
-When login succeeds
-Then 10 XP is awarded
+Scenario: Empty History
+Given no completed assessments exist
+When Assessment History opens
+Then an empty state message is displayed
