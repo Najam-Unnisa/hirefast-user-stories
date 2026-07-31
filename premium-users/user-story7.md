@@ -1,22 +1,28 @@
-Feature 6: Assessment History
-User Story 7: View Assessment History
+Feature 6: Premium Dashboard
+User Story 7: View Premium Dashboard
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to view my previous assessments
+I want a dashboard that combines my assessment and learning information
 
-So that I can monitor my improvement over time.
+So that I can track all my progress from one place.
 
 Acceptance Criteria
-Feature: Assessment History
+Feature: Premium Dashboard
 
-Scenario: History Available
-Given previous assessments exist
-When the user opens Assessment History
-Then all completed assessments are listed chronologically
+Scenario: Dashboard Display
+Given the user is Premium
+When the dashboard loads
+Then the dashboard displays:
+And Job Readiness Score
+And AI Assessment Summary
+And Skill Reports
+And Assessment History
+And Progress Analytics
+And Personalized Recommendations
+And Gamification Progress
 
-Scenario: Empty History
-Given no completed assessments exist
-When Assessment History opens
-Then an empty state message is displayed
+Scenario: Dashboard Refresh
+When new assessment results become available
+Then dashboard widgets are updated
