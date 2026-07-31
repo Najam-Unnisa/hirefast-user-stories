@@ -1,22 +1,26 @@
-Feature 3: General Communication Assessment
-User Story 3: Start General Assessment
+User Story 3: Attempt Skill-Based Assessment
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to take the General Communication Assessment
+I want to complete premium skill assessments
 
-So that I can evaluate my employability skills.
+So that I can evaluate my expertise in specific domains.
 
 Acceptance Criteria
-Feature: General Communication Assessment
+Feature: Premium Skill Assessment
 
 Scenario: Start Assessment
-Given the user is on the Dashboard
-When the user selects General Communication Assessment
-Then the assessment starts successfully
+Given the user selects a Skill-Based Assessment
+When the assessment starts
+Then the assessment loads successfully
 
-Scenario: Resume Incomplete Assessment
-Given an assessment was previously auto-saved
-When the user opens the assessment
-Then the latest saved progress is restored
+Scenario: Resume Assessment
+Given an assessment was auto-saved
+When the user returns
+Then the saved progress is restored
+
+Scenario: Submit Assessment
+Given all mandatory questions are answered
+When the user submits the assessment
+Then evaluation begins
