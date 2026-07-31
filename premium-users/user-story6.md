@@ -1,27 +1,23 @@
-Feature 5: AI Assessment Report
-User Story 6: View AI Summary Report
+Feature 5: Personalized Learning Recommendations
+User Story 6: Receive Learning Recommendations
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to view AI-generated feedback
+I want personalized recommendations
 
-So that I understand my strengths and areas for improvement.
+So that I know which skills to improve next.
 
 Acceptance Criteria
-Feature: AI Summary Report
+Feature: Personalized Learning
 
-Scenario: View AI Report
-Given AI evaluation is complete
-When the user opens the report
-Then the report displays:
-And Assessment Summary
-And Strengths
-And Weaknesses
-And Improvement Areas
-And Personalized Recommendations
+Scenario: Recommendations Available
+Given assessment reports exist
+When the user opens Recommendations
+Then personalized learning suggestions are displayed
+And recommendations are based on assessment performance
 
-Scenario: AI Processing Delay
-Given AI evaluation is pending
-When the report page opens
-Then a processing message is displayed
+Scenario: No Recommendations
+Given recommendation data is unavailable
+When the page loads
+Then an informative message is displayed
