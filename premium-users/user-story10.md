@@ -1,19 +1,23 @@
-User Story 10: Achievement Badges
+Feature 9: Download Assessment Reports
+User Story 10: Download Reports
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to earn badges
+I want to download my assessment reports
 
-So that my achievements are recognized.
+So that I can keep or share my results.
 
 Acceptance Criteria
-Feature: Badges
+Feature: Report Download
 
-Scenario: Earn First Assessment Badge
-Given the user completes the first assessment
-Then the "First Assessment" badge is awarded
+Scenario: Download Successful
+Given a completed report exists
+When the user selects Download
+Then the report is generated
+And downloaded successfully
 
-Scenario: Badge Display
-When the user opens the Dashboard
-Then all earned badges are displayed
+Scenario: Download Failure
+When report generation fails
+Then an error message is displayed
+And the user can retry
