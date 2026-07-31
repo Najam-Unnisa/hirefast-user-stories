@@ -1,22 +1,24 @@
-User Story 4: Submit Assessment
+Feature 3: Detailed Skill Reports
+User Story 4: View Detailed Skill Report
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to submit my completed assessment
+I want to view detailed skill reports
 
-So that my Job Readiness Score can be updated.
+So that I understand my strengths and weaknesses in each competency.
 
 Acceptance Criteria
-Feature: Assessment Submission
+Feature: Detailed Skill Report
 
-Scenario: Successful Submission
-Given all mandatory questions are answered
-When the user submits the assessment
-Then the assessment is submitted
-And evaluation begins
+Scenario: Report Available
+Given assessment evaluation is complete
+When the user opens the Skill Report
+Then individual skill scores are displayed
+And strengths are highlighted
+And improvement areas are identified
 
-Scenario: Mandatory Questions Missing
-When mandatory questions are unanswered
-Then submission is prevented
-And unanswered questions are highlighted
+Scenario: Report Pending
+Given report generation is in progress
+When the report page opens
+Then a processing indicator is displayed
