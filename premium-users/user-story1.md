@@ -1,50 +1,52 @@
-
-Epic: Registered User (Freemium) Assessment & Dashboard Experience
+Epic: Premium Candidate Experience
 Business Goal
 
-Provide registered users with complete access to their assessment results, dashboard, and engagement features while encouraging continued platform usage and future premium upgrades.
+Provide premium subscribers with advanced employability assessments, detailed analytics, and personalized learning experiences to improve career readiness while increasing subscription value and retention.
 
-Persona: Registered User (Freemium)
+Persona: Premium Registered User (Paid)
 
 Success Criteria
 
-User completes profile registration.
-Dashboard is accessible.
-User can take the General Communication Assessment.
-JRS and AI Summary are visible.
-Assessment history is maintained.
-Gamification features are enabled.
-Premium features remain restricted.
-Feature 1: Registered User Authentication & Dashboard Access
-User Story 1: Login as Registered User
+User has an active premium subscription.
+Premium features are accessible.
+Skill-based assessments are available.
+Detailed reports and analytics are generated.
+Personalized recommendations are displayed.
+Premium subscription status is validated before access.
+
+Feature 1: Premium Subscription Access
+User Story 1: Access Premium Features
 Description
 
-Allow registered users to log in using Google and access their personalized dashboard.
+Allow users with an active premium subscription to unlock premium functionality.
 
 User Story
 
-As a Registered User
-
-I want to sign in using my Google account
-
-So that I can access my HireFast dashboard and continue my learning journey.
+As a Premium User
 
 Acceptance Criteria (Gherkin)
-Feature: Registered User Login
+Feature: Premium Subscription Validation
 
 Background:
-Given the user has completed profile registration
+Given the user has successfully logged into HireFast
 
-Scenario: Successful Login
-When the user signs in using Google
-Then the system authenticates the user
-And redirects the user to the Dashboard
+Scenario: Active Premium Subscription
+Given the user has an active premium subscription
+When the dashboard loads
+Then premium features are enabled
+And premium navigation items are displayed
 
-Scenario: Returning User
-Given the user has previous assessments
-When the user logs in
-Then the dashboard displays the latest assessment information
+Scenario: Expired Subscription
+Given the user's premium subscription has expired
+When the dashboard loads
+Then premium features are hidden
+And the user is informed that renewal is required
 
-Scenario: Authentication Failure
-When Google authentication fails
-Then an appropriate error message is displayed
+Scenario: Subscription Validation Failure
+When subscription verification cannot be completed
+Then premium features remain inaccessible
+And an appropriate error message is displayed
+
+I want premium features to be automatically unlocked
+
+So that I can use the additional services included in my subscription.
