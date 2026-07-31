@@ -1,20 +1,21 @@
-User Story 9: Daily Streak
+Feature 8: AI Career Coach (Future)
+User Story 9: AI Career Coaching
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to maintain a daily streak
+I want AI career guidance
 
-So that I stay consistent with my learning.
+So that I receive actionable advice to improve my career readiness.
 
 Acceptance Criteria
-Feature: Daily Streak
+Feature: AI Career Coach
 
-Scenario: Continue Streak
-Given the user completes an eligible activity today
-Then the daily streak increases by one
+Scenario: View Career Guidance
+Given AI coaching is available
+When the user opens Career Coach
+Then personalized career advice is displayed
 
-Scenario: Miss a Day
-Given no qualifying activity was completed yesterday
-When the user logs in today
-Then the streak resets to zero
+Scenario: Service Unavailable
+When the AI coaching service is unavailable
+Then the user is informed to try again later
