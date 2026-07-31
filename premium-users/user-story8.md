@@ -1,22 +1,21 @@
-Feature 7: Gamification
-User Story 8: Earn XP
+Feature 7: Premium Learning Modules (Future)
+User Story 8: Access Premium Learning Content
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to earn experience points
+I want to access premium learning modules
 
-So that I stay motivated to continue learning.
+So that I can improve my employability skills.
 
 Acceptance Criteria
-Feature: Experience Points
+Feature: Premium Learning
 
-Scenario: Assessment Completed
-Given the assessment is completed successfully
-When evaluation finishes
-Then 100 XP is awarded
+Scenario: Learning Module Access
+Given premium learning content is published
+When the user selects a module
+Then the content opens successfully
 
-Scenario: Daily Login
-Given the user logs in today
-When login succeeds
-Then 10 XP is awarded
+Scenario: Content Unavailable
+Given the selected module is unavailable
+Then an appropriate message is displayed
