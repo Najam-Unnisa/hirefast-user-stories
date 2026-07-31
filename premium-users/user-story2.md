@@ -1,30 +1,22 @@
-Feature 2: Dashboard
-User Story 2: View Dashboard
+Feature 2: Skill-Based Assessment Catalog
+User Story 2: Browse Premium Assessments
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to access my dashboard
+I want to browse available skill-based assessments
 
-So that I can view my assessment progress and performance.
+So that I can improve skills relevant to my career goals.
 
 Acceptance Criteria
-Feature: Dashboard
+Feature: Premium Assessment Catalog
 
-Scenario: Dashboard Load
-Given the user is logged in
-When the Dashboard opens
-Then the system displays:
-And Job Readiness Score
-And AI Assessment Summary
-And Assessment History
-And Skill Scores
-And Profile Completion Status
-And Gamification Progress
-And Recommended Next Steps
+Scenario: View Assessment Catalog
+Given the user has Premium access
+When the user opens Assessments
+Then all available Skill-Based Assessments are displayed
 
-Scenario: No Assessments
-Given the user has never completed an assessment
-When the Dashboard loads
-Then an empty state is displayed
-And a prompt to start the General Communication Assessment is shown
+Scenario: No Available Assessments
+Given no premium assessments are currently published
+When the user opens the catalog
+Then an empty state message is displayed
