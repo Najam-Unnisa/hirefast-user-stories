@@ -1,22 +1,23 @@
-Feature 4: View Job Readiness Score
-User Story 5: View Job Readiness Score
+Feature 4: Advanced Analytics
+User Story 5: View Progress Analytics
 User Story
 
-As a Registered User
+As a Premium User
 
-I want to view my Job Readiness Score
+I want to view my historical performance
 
-So that I understand my current employability level.
+So that I can monitor long-term improvement.
 
 Acceptance Criteria
-Feature: Job Readiness Score
+Feature: Progress Analytics
 
-Scenario: Evaluation Complete
-Given assessment evaluation is completed
-When the user opens Results
-Then the Job Readiness Score is displayed
+Scenario: Historical Trends
+Given multiple completed assessments exist
+When the user opens Analytics
+Then performance trends are displayed
+And skill improvements are visualized
 
-Scenario: Evaluation Pending
-Given evaluation is still processing
-When the user opens Results
-Then a processing status is displayed
+Scenario: Limited Data
+Given insufficient historical assessments
+When Analytics opens
+Then the system explains additional assessments are required
